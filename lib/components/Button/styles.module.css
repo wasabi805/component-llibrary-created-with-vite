@@ -1,0 +1,7 @@
+.button {
+  /* Use Button as the main class */
+
+  padding: 1rem;
+  background: cyan;
+  color: white;
+}
