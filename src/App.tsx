@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import { Button , printText } from '../lib/main'
+import { ButtonUi , printText, Form } from '../lib/main'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,11 +31,20 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      <Button onClick={()=> alert('works!')}>
-        My Library Button
-      </Button>
-
-      {printText('Hello my Friend')}
+      <ButtonUi 
+        sx={{background: 'lime'}}
+        text={'My Library Button'}
+        onClick={()=> alert('works!')}/>
+        
+      <Form 
+        one={'test'}
+        two={{
+          animals: [ { 
+            species: 'reptile', 
+            legs: 3
+          } ]
+        }}
+      />
     </>
   )
 }
