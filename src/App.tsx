@@ -3,10 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import { ButtonUi , printText, Form } from '../lib/main'
+import {  ContextFormDemo} from '../lib/main'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [localState, setLocalState] = useState({
+    value: 'wuTang'
+  })
+
 
   return (
     <>
@@ -20,31 +23,24 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+       
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
 
-      <ButtonUi 
-        sx={{background: 'lime'}}
-        text={'My Library Button'}
-        onClick={()=> alert('works!')}/>
-        
-      <Form 
-        one={'test'}
-        two={{
-          animals: [ { 
-            species: 'reptile', 
-            legs: 3
-          } ]
-        }}
-      />
+      <div className={'redux-area'} >
+
+          <ContextFormDemo
+            name='some_input'
+            value={ localState.value }
+            label={'some input'}
+            onChange={(e)=>{}}
+            />
+      </div>
+
+
+     
     </>
   )
 }

@@ -1,0 +1,28 @@
+.redux_form_demo_container {
+  width: 100%;
+  /* border: 1px solid red; */
+  padding: 1rem 0;
+
+  .label {
+    color: magenta;
+  }
+
+  .input_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & small {
+      position: relative;
+      text-align: start;
+      width: 100%;
+      color: magenta;
+      padding-bottom: 1rem;
+    }
+
+    & input {
+      height: 3rem;
+      border-radius: 5px;
+    }
+  }
+}

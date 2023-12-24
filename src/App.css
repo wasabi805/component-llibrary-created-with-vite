@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.redux-area {
+  position: relative;
+  display: flex;
+  height: 30vh;
+
+  border: 1px solid #2e8887;
+}
