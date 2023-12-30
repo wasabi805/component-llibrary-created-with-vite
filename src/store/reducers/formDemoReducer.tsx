@@ -1,10 +1,14 @@
-const initialState={}
 
-type State= object
+
+type State= {
+    value: string
+}
 
 type Action ={
     type: string,
-    payload: object
+    payload: {
+        value: string
+    }
 }
 
 type ReducerArgs = {
@@ -18,17 +22,25 @@ type Reducers={
     [ key: string ]: ({state, action} : ReducerArgs)=> State,
 }
 
+type InitialState={
+    value: string
+}
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const initialState: InitialState={
+    value: ''
+}
+
 export default function FormDemoReducer (state = initialState, action: Action): State{
 
-    const actionType: string = action.type
+    const actionType: string = action?.type
 
     const reducers: Reducers = {
-        TEST : ( {state, action} :  ReducerArgs ) =>{
+        SET_VALUE : ( {state, action} :  ReducerArgs ) =>{
+            alert('reducer fired')
             return {
                 ...state,
-                test:{
-                    ...action.payload
-                }
+                value : action.payload.value
             }
         }
     }

@@ -1,15 +1,17 @@
-import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import {  ContextFormDemo} from '../lib/main'
+import { useSelector } from 'react-redux'
+
 
 function App() {
-  const [localState, setLocalState] = useState({
-    value: 'wuTang'
-  })
-
+  // const [localState, setLocalState] = useState({
+  //   value: 'wuTang'
+  // })
+  const reduxState = useSelector(state=>state)
+  console.log('what is reduxState', reduxState)
 
   return (
     <>
@@ -31,12 +33,8 @@ function App() {
 
       <div className={'redux-area'} >
 
-          <ContextFormDemo
-            name='some_input'
-            value={ localState.value }
-            label={'some input'}
-            onChange={(e)=>{}}
-            />
+          {/* <ContextFormDemo label={'some input'}/> */}
+          
       </div>
 
 
