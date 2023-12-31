@@ -47,7 +47,6 @@
     "@mui/material": "^5.15.1",
     "@mui/styled-engine-sc": "^6.0.0-alpha.9",
     "@mui/types": "^7.2.11",
-    "@reduxjs/toolkit": "^2.0.1",
     "react-redux": "^9.0.4",
     "styled-components": "^6.1.3"
   }

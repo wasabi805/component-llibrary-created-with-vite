@@ -15,6 +15,10 @@ export default defineConfig({
     dts({include :['lib']})
   ],
 
+  server:{
+    port: 8080,
+  },
+
   build:{
     copyPublicDir: false,
 
